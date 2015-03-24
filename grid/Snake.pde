@@ -12,8 +12,8 @@ public class Snake {
   }
   
   
-  // Move the snake. Return false if death occurs. INCOMPLETE
-  public boolean move(char move) {
+  // Move the snake to the point given by the board. Return false if death occurs. INCOMPLETE
+  public boolean move(PVector point) {
     if (isPointInSnake(point)){
       return false;
     }

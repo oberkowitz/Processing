@@ -26,5 +26,6 @@ public class Board {
     // get the snakes last direction, calculate the PVector using the head and the direction,
     // then  tell the snake to add that. 
     // The snake should return true if that move keeps it alive, false if not.
+    return false;
   }
 }
