@@ -1,5 +1,6 @@
 public class Snake {
   private ArrayList<PVector> body;
+  private char lastDirection = UP;
   
   public Snake(PVector initial) {
     this.body = new ArrayList<PVector>();
@@ -10,7 +11,9 @@ public class Snake {
     return this.body.contains(point);
   }
   
-  public boolean move(PVector point) {
+  
+  // Move the snake. Return false if death occurs. INCOMPLETE
+  public boolean move(char move) {
     if (isPointInSnake(point)){
       return false;
     }
@@ -19,6 +22,7 @@ public class Snake {
     return true;
   }
   
+  // Add the point to the snake. The Board will decide to call this
   public void eat(PVector point) {
     this.body.add(0,point);
   }
